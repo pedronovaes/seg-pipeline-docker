@@ -22,3 +22,11 @@ docker run --rm \
     -v "$(pwd)/out":/data/out \
     seg-pipeline-docker:latest --input /data/in --output /data/out
 ```
+
+To test if the container works well, you can run locally without docker. Use these command to do that:
+
+```bash
+pip install -r requirements.txt
+export PYTHONAPP=$(pwd)
+python run_seg.py --input images --output out
+```
